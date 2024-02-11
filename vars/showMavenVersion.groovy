@@ -3,10 +3,12 @@ def call() {
     println('Retrieving Maven information')
     def (mavenVersion, javaVersion) = VersionUtils.getMavenAndJavaVersion(this)
     sh """
-        ||==========MAVEN VERSION==========||
-        || Apache Maven: ${mavenVersion}
-        || Java version: ${javaVersion}
-        ||=================================||
+        echo <<EOF
+||==========MAVEN VERSION==========||
+|| Apache Maven: ${mavenVersion}
+|| Java version: ${javaVersion}
+||=================================||
+EOF
     """
     // println "||==========MAVEN VERSION==========||"
     // println "|| Apache Maven: $mavenVersion"
