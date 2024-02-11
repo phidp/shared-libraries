@@ -4,7 +4,7 @@ package vn.com.example
 class VersionUtils {
 
     static def getMavenAndJavaVersion() {
-        def process = "mvn --version".execute()
+        def process = "/opt/homebrew/bin/mvn --version".execute()
         process.waitFor()
 
         def mavenVersionOutput = process.text.trim()
