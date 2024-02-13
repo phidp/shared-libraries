@@ -11,7 +11,7 @@ class VersionUtils {
         def mavenVersion = mavenVersionOutput.split('\n').find { it.startsWith('Apache Maven') }?.split(' ')[2]
         def javaVersion = mavenVersionOutput.split('\n').find { it.startsWith('Java version') }?.split(' ')[2]
 
-        result = """
+        def result = """
 ||==========MAVEN VERSION==========||
 || Apache Maven: ${mavenVersion}
 || Java version: ${javaVersion}

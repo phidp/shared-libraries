@@ -8,6 +8,6 @@ def call() {
     Logger log = new Logger(this)
     log.info('Retrieving Maven information')
     
-    result = VersionUtils.getMavenAndJavaVersion(this)
+    def result = VersionUtils.getMavenAndJavaVersion(this)
     println(result)
 }
