@@ -6,8 +6,14 @@ import static vn.com.example.utils.ConfigConstants.*
 def call() {
     Logger.init(this, [ (LOGLEVEL) : LogLevel.TRACE] )
     Logger log = new Logger(this)
-    log.info('Retrieving Maven information')
-    
+    ansiColor(xterm) {
+        log.info('Retrieving Maven information')
+    }
     def result = VersionUtils.getMavenAndJavaVersion(this)
-    println(result)
+    ansiColor(xterm) {
+        println(result)
+    }
+    ansiColor(xterm) {
+        log.debug($(println(result)))
+    }
 }
