@@ -7,7 +7,7 @@ class VersionUtils {
         // def process = "/opt/homebrew/bin/mvn --version".execute()
         // process.waitFor()
 
-        def mavenVersionOutput = script.sh(script: 'mvn --version', returnStdout: true).trim()
+        def mavenVersionOutput = script.sh(script: '/opt/homebrew/bin/mvn --version', returnStdout: true).trim()
         def mavenVersion = mavenVersionOutput.split('\n').find { it.startsWith('Apache Maven') }?.split(' ')[2]
         def javaVersion = mavenVersionOutput.split('\n').find { it.startsWith('Java version') }?.split(' ')[2]
 
