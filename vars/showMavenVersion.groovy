@@ -14,6 +14,6 @@ def call() {
         println(result)
     }
     ansiColor('xterm') {
-        log.debug(\$(println(result)))
+        log.debug(result)
     }
 }
