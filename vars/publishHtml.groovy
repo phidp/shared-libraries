@@ -1,5 +1,6 @@
 def call(Map params) {
-    config = params.publishHtml
+    config = params.config
+    echo config
     publishHTML(
         [
             allowMissing: false,
