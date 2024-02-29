@@ -1,3 +1,4 @@
+import vn.com.example.utils.logging.*
 def call(Map params) {
     config = params.config
     publishHTML(
@@ -12,4 +13,5 @@ def call(Map params) {
             useWrapperFileDirectly: true
         ]
     )
+    log.info(config, config)
 }
