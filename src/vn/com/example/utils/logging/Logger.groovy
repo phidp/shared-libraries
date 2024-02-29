@@ -122,7 +122,7 @@ class Logger implements Serializable {
   static void init(Script script, Map map) {
     LogLevel lvl
     if (map) {
-      lvl = map[ConfigConstants.LOGLEVEL] ?: LogLevel.INFO
+      lvl = map['logLevel'] ?: LogLevel.INFO
     } else {
       lvl = LogLevel.INFO
     }
