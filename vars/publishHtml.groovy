@@ -1,5 +1,8 @@
 import vn.com.example.utils.logging.*
 def call(Map params) {
+    Logger.init(steps, LogLevel.INFO)
+    Logger log = new Logger(this)
+    
     config = params.config
     publishHTML(
         [
