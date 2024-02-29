@@ -20,7 +20,6 @@
 package vn.com.example.utils.logging
 
 import com.cloudbees.groovy.cps.NonCPS
-import vn.com.example.utils.ConfigConstants
 import org.jenkinsci.plugins.scriptsecurity.sandbox.RejectedAccessException
 import org.jenkinsci.plugins.workflow.cps.DSL
 
